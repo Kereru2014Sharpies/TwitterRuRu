@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel1" targetNamespace="TwitterRuRu" databaseProvider="SqlServer2012" connectionString="Data Source=CHEETAH\SQLEXPRESS;Initial Catalog=TwitterRuRu;Integrated Security=True" pluralizedInDatabase="false" mediumTrustCompatibility="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+  <entities>
+    <entity name="Accounts" identityType="Int32" cacheExpiry="0" identityMethod="IdentityColumn">
+      <entityProperties>
+        <entityProperty name="user_login" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+            <uniquenessValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="password_hash" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+  </entities>
+</model>

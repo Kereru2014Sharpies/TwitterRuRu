@@ -1,20 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel1" targetNamespace="TwitterRuRu" databaseProvider="SqlServer2012" connectionString="Data Source=CHEETAH\SQLEXPRESS;Initial Catalog=TwitterRuRu;Integrated Security=True" pluralizedInDatabase="false" mediumTrustCompatibility="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
   <entities>
-    <entity name="Accounts" identityType="Int32" cacheExpiry="0" identityMethod="IdentityColumn">
+    <entity name="Accounts" identityType="Int32" cacheExpiry="0" identityMethod="IdentityColumn" />
+    <entity name="AspNetUser" identityType="String" cacheExpiry="0" tableName="AspNetUsers">
       <entityProperties>
-        <entityProperty name="user_login" privateSetter="false">
+        <entityProperty name="UserName" isNullable="true" privateSetter="false" />
+        <entityProperty name="PasswordHash" isNullable="true" privateSetter="false" />
+        <entityProperty name="SecurityStamp" isNullable="true" privateSetter="false" />
+        <entityProperty name="Discriminator" privateSetter="false">
           <validations>
-            <lengthValidation minimumLength="0" maximumLength="50" />
-            <uniquenessValidation />
-          </validations>
-        </entityProperty>
-        <entityProperty name="password_hash" privateSetter="false">
-          <validations>
-            <lengthValidation minimumLength="0" maximumLength="50" />
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="128" />
           </validations>
         </entityProperty>
       </entityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="84f177bf-284b-4765-8e08-e3ad7bdf113d" collectionName="Accounts" backreferenceName="AspNetUser" isNullable="true" columnName="AspNetUser_Id">
+          <entityMoniker name="/LightSpeedModel1/Accounts" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
     </entity>
   </entities>
 </model>

@@ -2,11 +2,25 @@
 <minimalLanguageDiagram dslVersion="1.1.0.0" absoluteBounds="0, 0, 11, 8.5" name="LightSpeedModel1">
   <modelMoniker name="/LightSpeedModel1" />
   <nestedChildShapes>
-    <entityShape Id="eb22854f-29cf-4580-b314-74d6d8fcf12f" absoluteBounds="5.125, 2.125, 1.5, 0.89460286458333371">
+    <entityShape Id="eb22854f-29cf-4580-b314-74d6d8fcf12f" absoluteBounds="6.5, 2.125, 1.5, 0.51000000000000023">
       <entityMoniker name="/LightSpeedModel1/Accounts" />
       <nestedChildShapes>
-        <elementListCompartment Id="1558ee6b-e83e-4811-a22a-c5cd75e0007e" absoluteBounds="5.1400000000000006, 2.535, 1.4700000000000002, 0.38460286458333331" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1558ee6b-e83e-4811-a22a-c5cd75e0007e" absoluteBounds="6.5150000000000006, 2.535, 1.4700000000000002, 0" name="Properties" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </entityShape>
+    <entityShape Id="66779cdc-f4f3-472d-9577-68728bed94df" absoluteBounds="2.25, 2, 1.5, 1.2792057291666668">
+      <entityMoniker name="/LightSpeedModel1/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77619f92-176a-42fc-9d1c-ff8febdca44b" absoluteBounds="2.265, 2.41, 1.4700000000000002, 0.76920572916666663" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <oneToManyAssociationConnector edgePoints="[(3.75 : 2.38); (6.5 : 2.38)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <oneToManyAssociationMoniker Id="84f177bf-284b-4765-8e08-e3ad7bdf113d" />
+      <relativeChildShapes />
+      <nodes>
+        <entityShapeMoniker Id="66779cdc-f4f3-472d-9577-68728bed94df" />
+        <entityShapeMoniker Id="eb22854f-29cf-4580-b314-74d6d8fcf12f" />
+      </nodes>
+    </oneToManyAssociationConnector>
   </nestedChildShapes>
 </minimalLanguageDiagram>

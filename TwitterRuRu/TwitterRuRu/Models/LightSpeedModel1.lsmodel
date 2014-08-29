@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel1" targetNamespace="TwitterRuRu" databaseProvider="SqlServer2012" connectionString="Data Source=CHEETAH\SQLEXPRESS;Initial Catalog=TwitterRuRu;Integrated Security=True" pluralizedInDatabase="false" mediumTrustCompatibility="false" checkForMissingKeyTable="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LightSpeedModel1" targetNamespace="TwitterRuRu" databaseProvider="SqlServer2012" connectionString="Data Source=CHEETAH\SQLExpress;Initial Catalog=TwitterRuRu_DB;Integrated Security=True" pluralizedInDatabase="false" mediumTrustCompatibility="false" checkForMissingKeyTable="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
   <entities>
     <entity name="Accounts" identityType="Int32" cacheExpiry="0" identityMethod="IdentityColumn" />
     <entity name="AspNetUser" identityType="String" cacheExpiry="0" tableName="AspNetUsers">

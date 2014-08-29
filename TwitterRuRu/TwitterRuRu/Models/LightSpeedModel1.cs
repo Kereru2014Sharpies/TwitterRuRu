@@ -92,6 +92,8 @@ namespace TwitterRuRu
 
     [ReverseAssociation("AspNetUser")]
     private readonly EntityCollection<Accounts> _accounts = new EntityCollection<Accounts>();
+    [ReverseAssociation("AspNetUserTweet")]
+    private readonly EntityCollection<Tweets> _tweets = new EntityCollection<Tweets>();
 
 
     #endregion
@@ -102,6 +104,12 @@ namespace TwitterRuRu
     public EntityCollection<Accounts> Accounts
     {
       get { return Get(_accounts); }
+    }
+
+    [System.Diagnostics.DebuggerNonUserCode]
+    public EntityCollection<Tweets> Tweets
+    {
+      get { return Get(_tweets); }
     }
 
 
@@ -137,6 +145,77 @@ namespace TwitterRuRu
   }
 
 
+  [Serializable]
+  [System.CodeDom.Compiler.GeneratedCode("LightSpeedModelGenerator", "1.0.0.0")]
+  [System.ComponentModel.DataObject]
+  [Table(IdentityMethod=IdentityMethod.IdentityColumn)]
+  public partial class Tweets : Entity<int>
+  {
+    #region Fields
+  
+    private string _message;
+    private System.DateTime _created_date;
+    [Column("AspNetUser_TweetID")]
+    private string _aspNetUserTweetId;
+
+    #endregion
+    
+    #region Field attribute and view names
+    
+    /// <summary>Identifies the message entity attribute.</summary>
+    public const string messageField = "message";
+    /// <summary>Identifies the created_date entity attribute.</summary>
+    public const string created_dateField = "created_date";
+    /// <summary>Identifies the AspNetUserTweetId entity attribute.</summary>
+    public const string AspNetUserTweetIdField = "AspNetUserTweetId";
+
+
+    #endregion
+    
+    #region Relationships
+
+    [ReverseAssociation("Tweets")]
+    private readonly EntityHolder<AspNetUser> _aspNetUserTweet = new EntityHolder<AspNetUser>();
+
+
+    #endregion
+    
+    #region Properties
+
+    [System.Diagnostics.DebuggerNonUserCode]
+    public AspNetUser AspNetUserTweet
+    {
+      get { return Get(_aspNetUserTweet); }
+      set { Set(_aspNetUserTweet, value); }
+    }
+
+
+    [System.Diagnostics.DebuggerNonUserCode]
+    public string message
+    {
+      get { return Get(ref _message, "message"); }
+      set { Set(ref _message, value, "message"); }
+    }
+
+    [System.Diagnostics.DebuggerNonUserCode]
+    public System.DateTime created_date
+    {
+      get { return Get(ref _created_date, "created_date"); }
+      set { Set(ref _created_date, value, "created_date"); }
+    }
+
+    /// <summary>Gets or sets the ID for the <see cref="AspNetUserTweet" /> property.</summary>
+    [System.Diagnostics.DebuggerNonUserCode]
+    public string AspNetUserTweetId
+    {
+      get { return Get(ref _aspNetUserTweetId, "AspNetUserTweetId"); }
+      set { Set(ref _aspNetUserTweetId, value, "AspNetUserTweetId"); }
+    }
+
+    #endregion
+  }
+
+
 
 
   /// <summary>
@@ -154,6 +233,11 @@ namespace TwitterRuRu
     public System.Linq.IQueryable<AspNetUser> AspNetUsers
     {
       get { return this.Query<AspNetUser>(); }
+    }
+    
+    public System.Linq.IQueryable<Tweets> Tweets
+    {
+      get { return this.Query<Tweets>(); }
     }
     
   }

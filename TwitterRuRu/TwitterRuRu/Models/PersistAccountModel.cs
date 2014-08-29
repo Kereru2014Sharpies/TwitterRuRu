@@ -10,7 +10,7 @@ using TwitterRuRu.Plumbing;
 
 namespace TwitterRuRu.Models
 {
-    public class PersistModel
+    public class PersistAccountModel
     {
         //redundant
         //public List<Accounts>AccountsList { get; set; }

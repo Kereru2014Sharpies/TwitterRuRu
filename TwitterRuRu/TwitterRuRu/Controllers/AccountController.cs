@@ -83,7 +83,7 @@ namespace TwitterRuRu.Controllers
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);
-                    CustomAccountModel TwitterRuRuAccountModel = new CustomAccountModel();
+                    HomeModel TwitterRuRuAccountModel = new HomeModel();
                     TwitterRuRuAccountModel.AddTwitterRuRuAcc(user.Id);
                     return RedirectToAction("Index", "Home");
                 }

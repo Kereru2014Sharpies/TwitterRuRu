@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.tweetwrapper{
+    padding-bottom: 2%;
+
+
+}
+.tweet {
+    display: block;
+    font-size: 3em;
+    border:  2px solid #808080;
+    min-height: 140px;
+    padding: 1em;
+    line-height:none;
+    border-radius: 6px;
+    margin: 0;
+}
+
+#Tweet{
+    max-width:100%;
+    width:90%;
+}
